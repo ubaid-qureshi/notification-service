@@ -11,7 +11,7 @@ const SMS = require('./SMS');
 class Notification {
   constructor() {
     this.userController = require('../User');
-    this.init();
+    // this.init();
   }
 
   init() {
@@ -23,6 +23,7 @@ class Notification {
   }
 
   async sendToAllModes({ message, numbers }) {
+    // New modes of messaging will come here
     return this.sendSms(message, numbers);
   }
 

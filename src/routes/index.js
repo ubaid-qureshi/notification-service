@@ -17,7 +17,6 @@ module.exports = (app) => {
     throw new AppError(404, 'URL Not Found');
   });
   app.use((err, req, res, next) => {
-    console.log(err);
     errorHandler(err, res);
   });
 };
