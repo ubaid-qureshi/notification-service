@@ -5,5 +5,10 @@
     },
     "LOGS": {
         "LOG_LEVEL" : "debug"
-    }
+    },
+    "NOTIFICATION_MODES": {
+        "ALL": "all",
+        "SMS": "sms"
+    },
+    "DEFAULT_MESSAGE" : "This is your message"
 }

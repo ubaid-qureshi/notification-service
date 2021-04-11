@@ -38,8 +38,7 @@ class User {
       return this.userDao.findOneAndUpdate(id, updateData);
     } catch (error) {
       throw new AppError(
-        error.message.statusCode || error.code || 400,
-        error.message.description || error.message,
+        error.code || 400, error.message,
       );
     }
   }
@@ -55,8 +54,8 @@ class User {
     return this.userDao.getOneByQuery(filter);
   }
 
-  async getAllByQuery() {
-    return this.userDao.getAllByQuery({});
+  async getAllByQuery(filter) {
+    return this.userDao.getAllByQuery(filter);
   }
 
   // Soft deleting user

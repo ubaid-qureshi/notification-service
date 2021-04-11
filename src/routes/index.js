@@ -7,6 +7,7 @@ module.exports = (app) => {
   const router = express.Router();
 
   router.use('/user', require('./v1/user'));
+  router.use('/notify', require('./v1/notify'));
 
   app.use('/', require('./v1/config'));
   app.use('/api/v1', router);
@@ -16,6 +17,7 @@ module.exports = (app) => {
     throw new AppError(404, 'URL Not Found');
   });
   app.use((err, req, res, next) => {
+    console.log(err);
     errorHandler(err, res);
   });
 };
