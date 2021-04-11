@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test suit for user Notify should pass 1`] = `
+Object {
+  "status": "sent",
+}
+`;

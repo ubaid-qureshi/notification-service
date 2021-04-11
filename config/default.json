@@ -1,0 +1,18 @@
+{
+    "APP_PORT": 3000,
+    "db": {
+        "MONGODB_URI": "mongodb://localhost:27017/notification-service"
+    },
+    "LOGS": {
+        "LOG_LEVEL" : "debug"
+    },
+    "NOTIFICATION_MODES": {
+        "ALL": "all",
+        "SMS": "sms"
+    },
+    "DEFAULT_MESSAGE" : "This is your message",
+    "DEFAULT_RETRY" : 3,
+    "SCHEDULE": {
+        "EVERY_MINUTE": "* * * * *"
+    }
+}
