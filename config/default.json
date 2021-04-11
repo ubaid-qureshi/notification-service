@@ -11,5 +11,8 @@
         "SMS": "sms"
     },
     "DEFAULT_MESSAGE" : "This is your message",
-    "DEFAULT_RETRY" : 3
+    "DEFAULT_RETRY" : 3,
+    "SCHEDULE": {
+        "EVERY_MINUTE": "* * * * *"
+    }
 }

@@ -25,6 +25,9 @@ app.use(
 // Routes
 require('./routes')(app);
 
+// Schedulers
+require('./Schedulers').notify();
+
 const port = process.env.APP_PORT || APP_PORT;
 app.listen(port, () => {
   _logger.info(`App listening on port ${port} in ${process.env.NODE_ENV} environment`);

@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-condition */
 /* eslint-disable no-await-in-loop */
 /* eslint-disable class-methods-use-this */
 const {
