@@ -25,6 +25,7 @@ class Notify {
 
   async notify(mode, message, numbers, retryLimit = DEFAULT_RETRY) {
     let attemptCount = 0;
+
     while (true) {
       attemptCount += 1;
       if (attemptCount >= retryLimit) throw new AppError(400, 'Max retries limit reached');
@@ -36,9 +37,12 @@ class Notify {
           message, numbers,
         });
       } else {
-        throw new AppError(400, 'Please select correct notification  mode');
+        throw new AppError(400, 'Please select correct notification mode');
       }
-      return response;
+
+      if (response.status === 'sent') {
+        return response;
+      }
     }
   }
 
