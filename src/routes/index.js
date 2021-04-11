@@ -1,10 +1,12 @@
 /* eslint-disable no-unused-vars */
 const express = require('express');
 
-const { AppError, errorHandler } = require('../utils/requetHandler/errorHandler');
+const { AppError, errorHandler } = require('../utils/requestHandlers/errorHandler');
 
 module.exports = (app) => {
   const router = express.Router();
+
+  router.use('/user', require('./v1/user'));
 
   app.use('/', require('./v1/config'));
   app.use('/api/v1', router);

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const config = require('config');
-const { AppError } = require('../requetHandler/errorHandler');
+const { AppError } = require('../requestHandlers/errorHandler');
 
 module.exports = async () => {
   try {

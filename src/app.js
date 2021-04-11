@@ -1,5 +1,5 @@
 require('./utils/logger/logConfig.js');
-require('./utils/requetHandler/responseHandler');
+require('./utils/requestHandlers/responseHandler');
 require('./utils/db/mongo')();
 require('dotenv').config();
 
